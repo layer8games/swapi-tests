@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 
 import MoviesList from "./components/MoviesList";
-import AddMovie from "./components/AddMovie";
+import AddFilm from "./components/AddFilm";
 import "./App.css";
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
     setIsLoading(false);
   }, []);
 
-  const addMoveHandler = (film) => {
+  const addFilmHandler = (film) => {
     console.log(film);
   };
 
@@ -62,7 +62,7 @@ function App() {
   return (
     <React.Fragment>
       <section>
-        <AddMovie onAddMovie={addMoveHandler} />
+        <AddFilm onAddFilm={addFilmHandler} />
       </section>
       <section>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
